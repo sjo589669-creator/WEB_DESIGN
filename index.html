@@ -62,7 +62,7 @@ hr { border: none; border-top: 1px solid #151413; }
 .mast h1 span { color: #A8231C; }
 .mast .sub { font-family: 'Noto Serif CJK KR', serif; font-size: 13px; margin: 2mm 0 0 0; line-height: 22.75px; }
 .stage { position: absolute; left: 66mm; top: 76mm; width: 126mm; height: 132mm; }
-.arch { position: absolute; left: 0; top: 0; width: 126mm; height: 132mm; border-radius: 63mm 63mm 0 0; background-image: linear-gradient(to bottom, #E8D6CC, #D9BFAF); }
+.arch { position: absolute; left: 0; top: 0; width: 126mm; height: 132mm; border-radius: 63mm 63mm 0 0; background-image: linear-gradient(to bottom, #E8D6CC 0%, #D9BFAF 100%); }
 .stage .browser { left: 16mm; top: 52mm; width: 94mm; height: 74mm; }
 .stage .url { width: 57mm; }
 #cx1 { left: 76.5mm; } #cx2 { left: 81.6mm; } #cx3 { left: 86.7mm; }
@@ -115,7 +115,7 @@ hr { border: none; border-top: 1px solid #151413; }
 #op1 .kicker, #op1 .en { color: #E8D6CC; }
 #op1 .otitle p { color: #CFC8BE; }
 .ring { position: absolute; left: 15mm; top: 70mm; width: 70mm; height: 70mm; border: 1px solid #5A554F; border-radius: 50%; }
-.ball { position: absolute; left: 35mm; top: 90mm; width: 70mm; height: 70mm; border-radius: 50%; background-image: linear-gradient(to bottom, #A8231C, #5F1410); }
+.ball { position: absolute; left: 35mm; top: 90mm; width: 70mm; height: 70mm; border-radius: 50%; background-image: linear-gradient(to bottom, #A8231C 0%, #5F1410 100%); }
 #op2 .kicker, #op2 .en { color: #A8231C; }
 #op2 .otitle p { color: #4A403B; }
 .tiles { position: absolute; left: 15mm; top: 66mm; width: 93mm; }
@@ -152,7 +152,7 @@ hr { border: none; border-top: 1px solid #151413; }
 .popup .ttl { font-family: Inter, sans-serif; font-size: 8px; font-weight: bold; line-height: 14px; }
 .sw { overflow: hidden; margin: 2mm 0 0 0; font-size: 8px; line-height: 3.2mm; }
 .tg { position: relative; float: right; width: 6mm; height: 3.2mm; border-radius: 1.6mm; background-color: #5E6447; }
-.tg.off { background-color: #CCCCCC; }
+.off { background-color: #CCCCCC; }
 .knob { position: absolute; left: 3.2mm; top: 0.4mm; width: 2.4mm; height: 2.4mm; border-radius: 50%; background-color: #FFFFFF; }
 .pin { position: absolute; z-index: 5; width: 5.5mm; height: 5.5mm; border-radius: 50%; background-color: #A8231C; color: #FFFFFF; font-family: Inter, sans-serif; font-size: 8.5px; font-weight: bold; text-align: center; line-height: 5.5mm; border: 0.8mm solid #F3EEE6; }
 #p1 { left: 135.2mm; top: 2.2mm; } #p2 { left: 143.2mm; top: 28.2mm; } #p3 { left: 35.2mm; top: 61.2mm; } #p4 { left: 121.2mm; top: 95.2mm; }
@@ -198,7 +198,7 @@ hr { border: none; border-top: 1px solid #151413; }
 .v-brown { background-color: #2E2B28; }
 .visual .no { position: absolute; left: 3mm; top: 2mm; font-family: 'Noto Serif CJK KR', serif; font-size: 48px; font-weight: 900; line-height: 48px; color: #FFFFFF; }
 .icon { position: absolute; left: 14mm; top: 18mm; width: 24mm; height: 24mm; overflow: hidden; border-radius: 6mm; background-color: #FFFFFF; box-shadow: 0 2mm 5mm #4A4642; }
-.icon.ondark { background-color: #2B2A28; }
+.ondark { background-color: #2B2A28; }
 .kw { position: absolute; left: 0; top: 51mm; width: 52mm; text-align: center; font-family: Inter, sans-serif; font-size: 8px; font-weight: bold; color: #FFFFFF; line-height: 14px; }
 .ltext { margin: 0 0 0 59mm; }
 .cat { font-family: Inter, sans-serif; font-size: 8.5px; font-weight: bold; color: #A8231C; }
@@ -239,7 +239,7 @@ table.tpo td.it { width: 38mm; font-family: 'Noto Serif CJK KR', serif; font-wei
 
 /* ===== 12–13 위험 신호 ===== */
 .flag { overflow: hidden; padding: 5mm 0; border-bottom: 1px solid #151413; }
-.flag.nb { border-bottom: none; }
+.nb { border-bottom: none; }
 .fn { float: left; width: 22mm; font-family: 'Noto Serif CJK KR', serif; font-size: 53px; font-weight: 900; line-height: 47.7px; color: #A8231C; }
 .fbody { margin: 0 0 0 27mm; }
 .fbody h3 { font-size: 18.5px; line-height: 21.27px; }
@@ -255,12 +255,12 @@ table.tpo td.it { width: 38mm; font-family: 'Noto Serif CJK KR', serif; font-wei
 .dresser { position: relative; overflow: hidden; margin: 2mm 0 0 0; padding: 5mm 0 0 0; }
 .listing { float: left; width: 78.4mm; padding: 4mm; background-color: #FFFFFF; border: 1px solid #151413; }
 .listing + .listing { margin: 0 0 0 6mm; }
-.stamp { position: absolute; top: 1.27mm; padding: 1mm 3mm; border: 1.6px solid; background-color: #F3EEE6; font-family: Inter, sans-serif; font-size: 10.5px; font-weight: bold; line-height: 18.38px; }
+.stamp { position: absolute; top: 1.27mm; padding: 1mm 3mm; border: 1.6px solid #5E6447; background-color: #F3EEE6; font-family: Inter, sans-serif; font-size: 10.5px; font-weight: bold; line-height: 18.38px; }
 .best .stamp { left: 60.26mm; color: #5E6447; }
-.worst .stamp { left: 153.19mm; color: #A8231C; }
+.worst .stamp { left: 153.19mm; color: #A8231C; border-color: #A8231C; }
 .lhd { overflow: hidden; }
 .lic { float: left; width: 11mm; height: 11mm; border-radius: 2.5mm; }
-.lic.stripe { background-color: #A8231C; background-image: linear-gradient(to bottom, #A8231C 50%, #C94A3F 50%); background-size: 2.5mm 2.5mm; }
+.stripe { background-color: #A8231C; background-image: linear-gradient(to bottom, #A8231C 50%, #C94A3F 50%); background-size: 2.5mm 2.5mm; }
 .lname { margin: 0 0 0 14mm; }
 .nm { font-family: 'Noto Serif CJK KR', serif; font-size: 13px; font-weight: 900; line-height: 16.9px; }
 .by { font-size: 8.8px; color: #6E675F; line-height: 15.4px; }
