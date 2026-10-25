@@ -5,13 +5,17 @@
 <style>
 /* ===== 기본 ===== */
 * { margin: 0; padding: 0; }
-body { background-color: #F3EEE6; color: #151413; font-family: 'Noto Sans CJK KR', sans-serif; font-size: 12.8px; line-height: 1.75; }
+body { background-color: #F3EEE6; color: #151413; font-family: 'Noto Sans CJK KR', sans-serif; font-size: 12.8px; line-height: 22.4px; }
 p + p { margin: 0.7em 0 0 0; }
-h1, h2, h3, h4, h5 { font-family: 'Noto Serif CJK KR', serif; font-weight: 900; line-height: 1.15; }
+h1, h2, h3, h4, h5 { font-family: 'Noto Serif CJK KR', serif; font-weight: 900; line-height: 18.4px; }
 hr { border: none; border-top: 1px solid #151413; }
 .cline { margin: 12mm 0 0 0; }
 .red { color: #A8231C; }
 .mono { font-family: 'DejaVu Sans Mono', monospace; font-size: 0.88em; }
+.callout .mono { line-height: 13.37px; }
+.step p .mono { line-height: 15.1px; }
+.ltext p .mono { line-height: 16.65px; }
+.carebox ul .mono { line-height: 15.71px; }
 
 /* ===== 한 쪽(페이지) ===== */
 .page { position: relative; width: 210mm; height: 271mm; overflow: hidden; background-color: #F3EEE6; }
@@ -30,8 +34,8 @@ hr { border: none; border-top: 1px solid #151413; }
 .head { height: 6mm; line-height: 5mm; border-bottom: 1px solid #151413; }
 .head .kicker { float: left; color: #A8231C; }
 .head .sec { float: right; font-family: Inter, sans-serif; font-size: 8.5px; color: #6E675F; }
-.article h2 { font-size: 37px; margin: 6mm 0 0 0; }
-.deck { font-family: 'Noto Serif CJK KR', serif; font-size: 14.5px; line-height: 1.65; margin: 4mm 0 0 0; color: #3A3632; }
+.article h2 { font-size: 37px; margin: 6mm 0 0 0; line-height: 42.55px; }
+.deck { font-family: 'Noto Serif CJK KR', serif; font-size: 14.5px; line-height: 23.93px; margin: 4mm 0 0 0; color: #3A3632; }
 
 /* ===== 브라우저 그림 (공통) ===== */
 .browser { position: absolute; overflow: hidden; background-color: #FFFFFF; border-radius: 3.5mm; box-shadow: 0 2mm 6mm #A99E93; }
@@ -54,9 +58,9 @@ hr { border: none; border-top: 1px solid #151413; }
 .mtop .l { position: absolute; left: 15mm; top: 0; }
 .mtop .c { position: absolute; left: 0; top: 0; width: 210mm; text-align: center; }
 .mtop .r { position: absolute; left: 135mm; top: 0; width: 60mm; text-align: right; }
-.mast h1 { font-size: 128px; line-height: 1; margin: 2mm 0 0 0; }
+.mast h1 { font-size: 128px; line-height: 128px; margin: 2mm 0 0 0; }
 .mast h1 span { color: #A8231C; }
-.mast .sub { font-family: 'Noto Serif CJK KR', serif; font-size: 13px; margin: 2mm 0 0 0; }
+.mast .sub { font-family: 'Noto Serif CJK KR', serif; font-size: 13px; margin: 2mm 0 0 0; line-height: 22.75px; }
 .stage { position: absolute; left: 66mm; top: 76mm; width: 126mm; height: 132mm; }
 .arch { position: absolute; left: 0; top: 0; width: 126mm; height: 132mm; border-radius: 63mm 63mm 0 0; background-image: linear-gradient(to bottom, #E8D6CC, #D9BFAF); }
 .stage .browser { left: 16mm; top: 52mm; width: 94mm; height: 74mm; }
@@ -70,44 +74,44 @@ hr { border: none; border-top: 1px solid #151413; }
 #ch1 { left: 15mm; top: 16mm; } #ch2 { left: 31mm; top: 33mm; } #ch3 { left: 57.5mm; top: 39mm; } #ch4 { left: 84mm; top: 33mm; } #ch5 { left: 100mm; top: 16mm; }
 .lines { position: absolute; left: 15mm; top: 86mm; width: 44mm; }
 .cl { margin: 0 0 10mm 0; padding: 2.5mm 0 0 0; border-top: 1px solid #151413; }
-.cl .n { font-family: Inter, sans-serif; font-size: 8.5px; font-weight: bold; color: #A8231C; }
-.cl .t { font-family: 'Noto Serif CJK KR', serif; font-size: 17px; font-weight: 900; line-height: 1.25; }
-.cl .d { margin: 1mm 0 0 0; font-size: 9px; line-height: 1.5; color: #6E675F; }
-.big { position: absolute; left: 15mm; top: 239mm; font-family: 'Noto Serif CJK KR', serif; font-size: 29px; font-weight: 900; line-height: 1.15; }
+.cl .n { font-family: Inter, sans-serif; font-size: 8.5px; font-weight: bold; color: #A8231C; line-height: 14.88px; }
+.cl .t { font-family: 'Noto Serif CJK KR', serif; font-size: 17px; font-weight: 900; line-height: 21.25px; }
+.cl .d { margin: 1mm 0 0 0; font-size: 9px; line-height: 13.5px; color: #6E675F; }
+.big { position: absolute; left: 15mm; top: 239mm; font-family: 'Noto Serif CJK KR', serif; font-size: 29px; font-weight: 900; line-height: 33.35px; }
 .barcode { position: absolute; left: 173mm; top: 241mm; width: 22mm; height: 11mm; }
 .barcode span { float: left; height: 11mm; margin: 0 0.5mm 0 0; background-color: #151413; }
 .b4 { width: 0.4mm; } .b5 { width: 0.5mm; } .b6 { width: 0.6mm; } .b8 { width: 0.8mm; } .b9 { width: 0.9mm; }
 .b10 { width: 1mm; } .b11 { width: 1.1mm; } .b12 { width: 1.2mm; } .b13 { width: 1.3mm; } .b14 { width: 1.4mm; }
-.meta { position: absolute; left: 135mm; top: 253.5mm; width: 60mm; text-align: right; font-family: Inter, sans-serif; font-size: 8px; }
+.meta { position: absolute; left: 135mm; top: 253.5mm; width: 60mm; text-align: right; font-family: Inter, sans-serif; font-size: 8px; line-height: 14px; }
 
 /* ===== 02 목차 ===== */
-.toc h2 { font-size: 59px; margin: 6mm 0 0 0; }
+.toc h2 { font-size: 59px; margin: 6mm 0 0 0; line-height: 67.85px; }
 .toccols { overflow: hidden; margin: 8mm 0 0 0; }
 .tocnav { float: left; width: 85mm; }
 .tocnav ol { list-style: none; }
 .tocnav li { overflow: hidden; padding: 3.4mm 0; border-top: 1px solid #151413; }
 .tocnav li:last-child { border-bottom: 1px solid #151413; }
-.tocnav .num { float: left; width: 12mm; font-family: 'Noto Serif CJK KR', serif; font-size: 27px; font-weight: 900; line-height: 1; }
+.tocnav .num { float: left; width: 12mm; font-family: 'Noto Serif CJK KR', serif; font-size: 27px; font-weight: 900; line-height: 27px; }
 .tocnav li:nth-child(2n) .num { color: #A8231C; }
-.tocnav .pg { float: right; font-family: Inter, sans-serif; font-size: 9px; font-weight: bold; }
+.tocnav .pg { float: right; font-family: Inter, sans-serif; font-size: 9px; font-weight: bold; line-height: 15.75px; }
 .tdesc { margin: 0 9mm 0 16mm; }
-.tdesc a { color: #151413; text-decoration: none; font-family: 'Noto Serif CJK KR', serif; font-size: 14.5px; font-weight: bold; line-height: 1.3; }
-.tdesc p { margin: 1mm 0 0 0; font-size: 10px; line-height: 1.5; color: #6E675F; }
-.tponote { margin: 6mm 0 0 0; padding: 0 0 0 4mm; border-left: 1.2mm solid #A8231C; font-family: 'Noto Serif CJK KR', serif; font-size: 12px; line-height: 1.7; }
+.tdesc a { color: #151413; text-decoration: none; font-family: 'Noto Serif CJK KR', serif; font-size: 14.5px; font-weight: bold; line-height: 18.85px; }
+.tdesc p { margin: 1mm 0 0 0; font-size: 10px; line-height: 15px; color: #6E675F; }
+.tponote { margin: 6mm 0 0 0; padding: 0 0 0 4mm; border-left: 1.2mm solid #A8231C; font-family: 'Noto Serif CJK KR', serif; font-size: 12px; line-height: 20.4px; }
 .letter { float: left; width: 71mm; margin: 0 0 0 10mm; padding: 7mm; background-color: #151413; color: #F3EEE6; }
 .letter .kicker { color: #E8D6CC; }
-.letter h3 { margin: 3mm 0 4mm 0; font-size: 21px; color: #FFFFFF; }
-.letter p { font-size: 11.5px; line-height: 1.85; color: #E6DED3; }
-.letter .sign { margin: 5mm 0 0 0; font-family: 'Noto Serif CJK KR', serif; font-size: 12px; text-align: right; color: #FFFFFF; }
+.letter h3 { margin: 3mm 0 4mm 0; font-size: 21px; color: #FFFFFF; line-height: 24.15px; }
+.letter p { font-size: 11.5px; line-height: 21.28px; color: #E6DED3; }
+.letter .sign { margin: 5mm 0 0 0; font-family: 'Noto Serif CJK KR', serif; font-size: 12px; text-align: right; color: #FFFFFF; line-height: 22.2px; }
 
 /* ===== 챕터 오프너 ===== */
-.label { position: absolute; left: 15mm; top: 16mm; }
-.huge { position: absolute; left: 0; top: 6mm; width: 216mm; text-align: right; font-family: 'Noto Serif CJK KR', serif; font-size: 333px; font-weight: 900; line-height: 0.8; }
+.label { position: absolute; left: 15mm; top: 16mm; line-height: 15.75px; }
+.huge { position: absolute; left: 0; top: 6mm; width: 216mm; text-align: right; font-family: 'Noto Serif CJK KR', serif; font-size: 333px; font-weight: 900; line-height: 266.4px; }
 .h-dark { color: #262422; } .h-blush { color: #DCC3B6; } .h-red { color: #B8352D; }
 .otitle { position: absolute; left: 15mm; top: 176mm; width: 180mm; }
-.otitle .en { margin: 0 0 4mm 0; font-family: Inter, sans-serif; font-size: 10.5px; }
-.otitle h2 { font-size: 53px; line-height: 1.12; }
-.otitle p { width: 120mm; margin: 6mm 0 0 0; font-family: 'Noto Serif CJK KR', serif; font-size: 14.5px; line-height: 1.7; }
+.otitle .en { margin: 0 0 4mm 0; font-family: Inter, sans-serif; font-size: 10.5px; line-height: 17.85px; }
+.otitle h2 { font-size: 53px; line-height: 59.36px; }
+.otitle p { width: 120mm; margin: 6mm 0 0 0; font-family: 'Noto Serif CJK KR', serif; font-size: 14.5px; line-height: 24.65px; }
 #op1 .kicker, #op1 .en { color: #E8D6CC; }
 #op1 .otitle p { color: #CFC8BE; }
 .ring { position: absolute; left: 15mm; top: 70mm; width: 70mm; height: 70mm; border: 1px solid #5A554F; border-radius: 50%; }
@@ -126,14 +130,14 @@ hr { border: none; border-top: 1px solid #151413; }
 .twocol { overflow: hidden; margin: 6mm 0 0 0; }
 .col { float: left; width: 86.5mm; text-align: justify; }
 .col + .col { margin: 0 0 0 7mm; }
-.dropcap { float: left; margin: 1mm 2mm 0 0; font-family: 'Noto Serif CJK KR', serif; font-size: 45px; font-weight: 900; line-height: 0.9; color: #A8231C; }
-.pull { margin: 6mm 0; padding: 4mm 0; border-top: 1.6px solid #151413; border-bottom: 1px solid #151413; font-family: 'Noto Serif CJK KR', serif; font-size: 18.5px; font-weight: bold; line-height: 1.45; }
+.dropcap { float: left; margin: 1mm 2mm 0 0; font-family: 'Noto Serif CJK KR', serif; font-size: 45px; font-weight: 900; line-height: 40.5px; color: #A8231C; }
+.pull { margin: 6mm 0; padding: 4mm 0; border-top: 1.6px solid #151413; border-bottom: 1px solid #151413; font-family: 'Noto Serif CJK KR', serif; font-size: 18.5px; font-weight: bold; line-height: 26.82px; }
 .vs { overflow: hidden; margin: 6mm 0 0 0; border: 1px solid #151413; }
 .vs .half { float: left; width: 79.5mm; height: 30mm; padding: 5mm; }
 .vs .then { border-right: 1px solid #151413; background-color: #E7E1D8; }
-.vs .kicker { font-size: 8px; }
+.vs .kicker { font-size: 8px; line-height: 14px; }
 .vs h4 { margin: 1mm 0 2mm 0; font-size: 16px; }
-.vs ul { list-style: none; font-size: 10.5px; line-height: 1.65; }
+.vs ul { list-style: none; font-size: 10.5px; line-height: 17.32px; }
 .sq { display: inline-block; width: 1.4mm; height: 1.4mm; margin: 0 2mm 0.3mm 0; background-color: #151413; }
 .now .sq { border-radius: 50%; background-color: #A8231C; }
 
@@ -145,36 +149,36 @@ hr { border: none; border-top: 1px solid #151413; }
 .blockmock { height: 20mm; margin: 3mm 0 0 0; border-radius: 1mm; background-color: #EFE7DD; }
 .overlay { position: absolute; left: 4mm; top: 14mm; width: 66mm; height: 73mm; border: 1px dashed #A8231C; border-radius: 1.5mm; }
 .popup { position: absolute; left: 73mm; top: 11mm; width: 30mm; padding: 3mm; z-index: 3; background-color: #FFFFFF; border: 1px solid #CFC6BA; border-radius: 2mm; box-shadow: 0 1.5mm 4mm #B3A89D; }
-.popup .ttl { font-family: Inter, sans-serif; font-size: 8px; font-weight: bold; }
+.popup .ttl { font-family: Inter, sans-serif; font-size: 8px; font-weight: bold; line-height: 14px; }
 .sw { overflow: hidden; margin: 2mm 0 0 0; font-size: 8px; line-height: 3.2mm; }
 .tg { position: relative; float: right; width: 6mm; height: 3.2mm; border-radius: 1.6mm; background-color: #5E6447; }
 .tg.off { background-color: #CCCCCC; }
 .knob { position: absolute; left: 3.2mm; top: 0.4mm; width: 2.4mm; height: 2.4mm; border-radius: 50%; background-color: #FFFFFF; }
-.pin { position: absolute; z-index: 5; width: 5.5mm; height: 5.5mm; border-radius: 50%; background-color: #A8231C; color: #FFFFFF; font-family: Inter, sans-serif; font-size: 8.5px; font-weight: bold; text-align: center; line-height: 5.5mm; box-shadow: 0 0 0 0.8mm #F3EEE6; }
-#p1 { left: 136mm; top: 3mm; } #p2 { left: 144mm; top: 29mm; } #p3 { left: 36mm; top: 62mm; } #p4 { left: 122mm; top: 96mm; }
-.callout { position: absolute; font-size: 9.8px; line-height: 1.55; }
-.callout b { font-family: 'Noto Serif CJK KR', serif; font-size: 12px; font-weight: 900; }
+.pin { position: absolute; z-index: 5; width: 5.5mm; height: 5.5mm; border-radius: 50%; background-color: #A8231C; color: #FFFFFF; font-family: Inter, sans-serif; font-size: 8.5px; font-weight: bold; text-align: center; line-height: 5.5mm; border: 0.8mm solid #F3EEE6; }
+#p1 { left: 135.2mm; top: 2.2mm; } #p2 { left: 143.2mm; top: 28.2mm; } #p3 { left: 35.2mm; top: 61.2mm; } #p4 { left: 121.2mm; top: 95.2mm; }
+.callout { position: absolute; font-size: 9.8px; line-height: 15.19px; }
+.callout b { font-family: 'Noto Serif CJK KR', serif; font-size: 12px; font-weight: 900; line-height: 18.6px; }
 .callout .no { display: inline-block; width: 5.5mm; height: 5.5mm; margin: 0 1.2mm 0 0; border-radius: 50%; background-color: #A8231C; color: #FFFFFF; font-family: Inter, sans-serif; font-size: 8.5px; font-weight: bold; text-align: center; line-height: 5.5mm; }
 #co1 { left: 0; top: 2mm; width: 31mm; } #co2 { left: 150mm; top: 52mm; width: 30mm; }
 #co3 { left: 0; top: 72mm; width: 31mm; } #co4 { left: 150mm; top: 92mm; width: 30mm; }
 .row2 { overflow: hidden; margin: 5mm 0 0 0; }
 .half2 { float: left; width: 87mm; }
 .half2 + .half2 { margin: 0 0 0 6mm; }
-.cap { margin: 0 0 1.5mm 0; font-family: Inter, sans-serif; font-size: 8px; color: #6E675F; }
-.code { padding: 4mm; border-radius: 1.5mm; background-color: #151413; color: #EDE6DA; font-family: 'DejaVu Sans Mono', monospace; font-size: 8.8px; line-height: 1.6; }
+.cap { margin: 0 0 1.5mm 0; font-family: Inter, sans-serif; font-size: 8px; color: #6E675F; line-height: 14px; }
+.code { padding: 4mm; border-radius: 1.5mm; background-color: #151413; color: #EDE6DA; font-family: 'DejaVu Sans Mono', monospace; font-size: 8.8px; line-height: 14.08px; }
 .code .k { color: #E3A79F; } .code .s { color: #C9D6A3; } .code .c { color: #8C857C; }
 
 /* ===== 06 전후 비교 ===== */
 .ba { overflow: hidden; margin: 7mm 0 0 0; }
 .bacol { float: left; width: 87mm; }
 .bacol + .bacol { margin: 0 0 0 6mm; }
-.tag { margin: 0 0 2mm 0; font-family: Inter, sans-serif; font-size: 8.5px; font-weight: bold; }
+.tag { margin: 0 0 2mm 0; font-family: Inter, sans-serif; font-size: 8.5px; font-weight: bold; line-height: 14.88px; }
 .ba .browser { position: relative; height: 64mm; }
 .before .url { width: 66mm; }
 .after .url { width: 55mm; }
 #u1 { left: 76mm; } #u2 { left: 81mm; }
 .site { height: 47mm; padding: 4mm; }
-.site h5 { margin: 0 0 2mm 0; font-size: 12px; }
+.site h5 { margin: 0 0 2mm 0; font-size: 12px; line-height: 13.8px; }
 .ad { height: 9mm; margin: 2mm 0; border-radius: 1mm; background-color: #F4C542; background-image: linear-gradient(to bottom, #F4C542 50%, #F7D873 50%); background-size: 4mm 4mm; font-family: Inter, sans-serif; font-size: 7.5px; font-weight: bold; text-align: center; line-height: 9mm; }
 .after .bar { background-color: #2A2928; border-bottom: 1px solid #3A3836; }
 .after .url { background-color: #3A3836; color: #AAAAAA; }
@@ -183,28 +187,28 @@ hr { border: none; border-top: 1px solid #151413; }
 .steps { overflow: hidden; margin: 8mm 0 0 0; }
 .step { float: left; width: 56.6mm; padding: 3mm 0 0 0; border-top: 1.6px solid #151413; }
 .step + .step { margin: 0 0 0 5mm; }
-.step .n { font-family: 'Noto Serif CJK KR', serif; font-size: 32px; font-weight: 900; line-height: 1; color: #A8231C; }
-.step h4 { margin: 2mm 0 1.5mm 0; font-size: 14px; }
-.step p { font-size: 10.4px; line-height: 1.65; }
+.step .n { font-family: 'Noto Serif CJK KR', serif; font-size: 32px; font-weight: 900; line-height: 32px; color: #A8231C; }
+.step h4 { margin: 2mm 0 1.5mm 0; font-size: 14px; line-height: 16.1px; }
+.step p { font-size: 10.4px; line-height: 17.16px; }
 
 /* ===== 08–09 룩북 ===== */
 .look { overflow: hidden; padding: 6.5mm 0; border-bottom: 1px solid #151413; }
 .look:last-child { border-bottom: none; }
 .visual { position: relative; float: left; width: 52mm; height: 58mm; overflow: hidden; }
 .v-brown { background-color: #2E2B28; }
-.visual .no { position: absolute; left: 3mm; top: 2mm; font-family: 'Noto Serif CJK KR', serif; font-size: 48px; font-weight: 900; line-height: 1; color: #FFFFFF; }
+.visual .no { position: absolute; left: 3mm; top: 2mm; font-family: 'Noto Serif CJK KR', serif; font-size: 48px; font-weight: 900; line-height: 48px; color: #FFFFFF; }
 .icon { position: absolute; left: 14mm; top: 18mm; width: 24mm; height: 24mm; overflow: hidden; border-radius: 6mm; background-color: #FFFFFF; box-shadow: 0 2mm 5mm #4A4642; }
 .icon.ondark { background-color: #2B2A28; }
-.kw { position: absolute; left: 0; top: 51mm; width: 52mm; text-align: center; font-family: Inter, sans-serif; font-size: 8px; font-weight: bold; color: #FFFFFF; }
+.kw { position: absolute; left: 0; top: 51mm; width: 52mm; text-align: center; font-family: Inter, sans-serif; font-size: 8px; font-weight: bold; color: #FFFFFF; line-height: 14px; }
 .ltext { margin: 0 0 0 59mm; }
 .cat { font-family: Inter, sans-serif; font-size: 8.5px; font-weight: bold; color: #A8231C; }
-.ltext h3 { margin: 1mm 0; font-size: 22.5px; }
+.ltext h3 { margin: 1mm 0; font-size: 22.5px; line-height: 25.88px; }
 .style { margin: 0 0 2.5mm 0; font-family: 'Noto Serif CJK KR', serif; font-size: 12.5px; color: #6E675F; }
-.ltext p { font-size: 11px; line-height: 1.72; }
+.ltext p { font-size: 11px; line-height: 18.92px; }
 .spec { margin: 3mm 0 0 0; }
-.spec span { display: inline-block; margin: 0 1.5mm 1mm 0; padding: 0.3mm 2.2mm; border: 1px solid #151413; border-radius: 3mm; font-size: 9px; }
+.spec span { display: inline-block; margin: 0 1.5mm 1mm 0; padding: 0.3mm 2.2mm; border: 1px solid #151413; border-radius: 3mm; font-size: 9px; line-height: 15.48px; }
 .spec span.warn { border-color: #A8231C; color: #A8231C; }
-.note { margin: 2.5mm 0 0 0; padding: 0 0 0 3mm; border-left: 0.8mm solid #B4875A; font-size: 9.5px; line-height: 1.55; color: #6E675F; }
+.note { margin: 2.5mm 0 0 0; padding: 0 0 0 3mm; border-left: 0.8mm solid #B4875A; font-size: 9.5px; line-height: 18.92px; color: #6E675F; }
 .shield { position: absolute; left: 6mm; top: 4.5mm; width: 12mm; height: 15mm; border-radius: 2mm 2mm 7mm 7mm; background-color: #A8231C; color: #FFFFFF; font-family: Inter, sans-serif; font-size: 17px; font-weight: bold; text-align: center; line-height: 13mm; }
 .shackle { position: absolute; left: 8.1mm; top: 4mm; width: 5.4mm; height: 5mm; border: 1.2mm solid #23304A; border-bottom: none; border-radius: 3.5mm 3.5mm 0 0; }
 .lockbody { position: absolute; left: 6mm; top: 10.2mm; width: 12mm; height: 9mm; border-radius: 1.5mm; background-color: #23304A; }
@@ -220,82 +224,82 @@ hr { border: none; border-top: 1px solid #151413; }
 .uline { position: absolute; left: 5mm; top: 18.5mm; width: 14mm; height: 0.8mm; background-color: #A8231C; }
 
 /* ===== 10 상황별 코디 ===== */
-table.tpo { width: 100%; margin: 6mm 0 0 0; background-color: #CFC6BA; font-size: 10.9px; }
-table.tpo th, table.tpo td { padding: 2.8mm 2mm; text-align: left; line-height: 1.55; background-color: #F3EEE6; }
-table.tpo thead th { border-bottom: 2px solid #151413; font-family: Inter, sans-serif; font-size: 8.5px; color: #6E675F; }
-table.tpo tbody th { width: 30mm; font-family: 'Noto Serif CJK KR', serif; font-size: 13px; font-weight: 900; }
+table.tpo { width: 100%; margin: 6mm 0 0 0; background-color: #CFC6BA; font-size: 10.9px; line-height: 19.07px; }
+table.tpo th, table.tpo td { padding: 2.8mm 2mm; text-align: left; line-height: 16.9px; background-color: #F3EEE6; }
+table.tpo thead th { border-bottom: 2px solid #151413; font-family: Inter, sans-serif; font-size: 8.5px; color: #6E675F; line-height: 13.18px; }
+table.tpo tbody th { width: 30mm; font-family: 'Noto Serif CJK KR', serif; font-size: 13px; font-weight: 900; line-height: 20.15px; }
 table.tpo td.it { width: 38mm; font-family: 'Noto Serif CJK KR', serif; font-weight: bold; }
 .rules { overflow: hidden; margin: 8mm 0 0 0; background-color: #151413; color: #F3EEE6; }
 .rule { float: left; width: 49.8mm; padding: 5mm; border-right: 1px solid #444444; }
 .rule:last-child { border-right: none; }
-.rule .n { font-family: 'Noto Serif CJK KR', serif; font-size: 29px; font-weight: 900; line-height: 1; color: #E8D6CC; }
-.rule h4 { margin: 2mm 0 1.5mm 0; font-size: 14px; color: #FFFFFF; }
-.rule p { font-size: 10px; line-height: 1.65; color: #D8D0C4; }
-.closing { margin: 7mm 0 0 0; font-family: 'Noto Serif CJK KR', serif; font-size: 13.3px; line-height: 1.7; }
+.rule .n { font-family: 'Noto Serif CJK KR', serif; font-size: 29px; font-weight: 900; line-height: 29px; color: #E8D6CC; }
+.rule h4 { margin: 2mm 0 1.5mm 0; font-size: 14px; color: #FFFFFF; line-height: 16.1px; }
+.rule p { font-size: 10px; line-height: 16.5px; color: #D8D0C4; }
+.closing { margin: 7mm 0 0 0; font-family: 'Noto Serif CJK KR', serif; font-size: 13.3px; line-height: 22.61px; }
 
 /* ===== 12–13 위험 신호 ===== */
 .flag { overflow: hidden; padding: 5mm 0; border-bottom: 1px solid #151413; }
 .flag.nb { border-bottom: none; }
-.fn { float: left; width: 22mm; font-family: 'Noto Serif CJK KR', serif; font-size: 53px; font-weight: 900; line-height: 0.9; color: #A8231C; }
+.fn { float: left; width: 22mm; font-family: 'Noto Serif CJK KR', serif; font-size: 53px; font-weight: 900; line-height: 47.7px; color: #A8231C; }
 .fbody { margin: 0 0 0 27mm; }
-.fbody h3 { font-size: 18.5px; }
+.fbody h3 { font-size: 18.5px; line-height: 21.27px; }
 .sig { display: inline-block; margin: 1.5mm 0 2mm 0; padding: 0.2mm 2mm; background-color: #A8231C; color: #FFFFFF; font-size: 9.3px; }
-.fbody p { font-size: 11px; line-height: 1.72; }
-.perm { width: 110mm; margin: 2.5mm 0 0 0; padding: 3mm 4mm; background-color: #FFFFFF; border: 1px solid #CFC6BA; border-radius: 2mm; box-shadow: 0 1mm 3mm #D8D0C4; font-size: 10px; }
+.fbody p { font-size: 11px; line-height: 18.92px; }
+.perm { width: 110mm; margin: 2.5mm 0 0 0; padding: 3mm 4mm; background-color: #FFFFFF; border: 1px solid #CFC6BA; border-radius: 2mm; box-shadow: 0 1mm 3mm #D8D0C4; font-size: 10px; line-height: 17.5px; }
 .perm .pt { margin: 0 0 1.5mm 0; font-weight: bold; }
-.perm ul { padding: 0 0 0 4mm; line-height: 1.6; color: #3A3632; }
+.perm ul { padding: 0 0 0 4mm; line-height: 16px; color: #3A3632; }
 .perm ul b { color: #A8231C; }
 .btns { margin: 2mm 0 0 0; text-align: right; }
-.btns span { display: inline-block; margin: 0 0 0 1.5mm; padding: 0.6mm 3mm; border: 1px solid #CFC6BA; border-radius: 3mm; font-size: 8.6px; }
+.btns span { display: inline-block; margin: 0 0 0 1.5mm; padding: 0.6mm 3mm; border: 1px solid #CFC6BA; border-radius: 3mm; font-size: 8.6px; line-height: 14.79px; }
 .btns span:last-child { background-color: #23304A; border-color: #23304A; color: #FFFFFF; }
-.dresser { overflow: hidden; margin: 2mm 0 0 0; padding: 5mm 0 0 0; }
-.listing { position: relative; float: left; width: 78.4mm; padding: 4mm; background-color: #FFFFFF; border: 1px solid #151413; }
+.dresser { position: relative; overflow: hidden; margin: 2mm 0 0 0; padding: 5mm 0 0 0; }
+.listing { float: left; width: 78.4mm; padding: 4mm; background-color: #FFFFFF; border: 1px solid #151413; }
 .listing + .listing { margin: 0 0 0 6mm; }
-.stamp { position: absolute; left: 60mm; top: -4mm; padding: 1mm 3mm; border: 1.6px solid; background-color: #F3EEE6; font-family: Inter, sans-serif; font-size: 10.5px; font-weight: bold; }
-.best .stamp { color: #5E6447; }
-.worst .stamp { color: #A8231C; }
+.stamp { position: absolute; top: 1.27mm; padding: 1mm 3mm; border: 1.6px solid; background-color: #F3EEE6; font-family: Inter, sans-serif; font-size: 10.5px; font-weight: bold; line-height: 18.38px; }
+.best .stamp { left: 60.26mm; color: #5E6447; }
+.worst .stamp { left: 153.19mm; color: #A8231C; }
 .lhd { overflow: hidden; }
 .lic { float: left; width: 11mm; height: 11mm; border-radius: 2.5mm; }
 .lic.stripe { background-color: #A8231C; background-image: linear-gradient(to bottom, #A8231C 50%, #C94A3F 50%); background-size: 2.5mm 2.5mm; }
 .lname { margin: 0 0 0 14mm; }
-.nm { font-family: 'Noto Serif CJK KR', serif; font-size: 13px; font-weight: 900; line-height: 1.3; }
-.by { font-size: 8.8px; color: #6E675F; }
-table.lspec { margin: 3mm 0 0 0; font-size: 9.6px; }
+.nm { font-family: 'Noto Serif CJK KR', serif; font-size: 13px; font-weight: 900; line-height: 16.9px; }
+.by { font-size: 8.8px; color: #6E675F; line-height: 15.4px; }
+table.lspec { margin: 3mm 0 0 0; font-size: 9.6px; line-height: 16.8px; }
 table.lspec td { padding: 0.3mm 0; }
 table.lspec td.lab { width: 20mm; color: #6E675F; }
 .worst td.x { color: #A8231C; font-weight: bold; }
-.tiny { margin: 2mm 0 0 0; font-size: 9px; color: #6E675F; }
+.tiny { margin: 2mm 0 0 0; font-size: 9px; color: #6E675F; line-height: 15.75px; }
 
 /* ===== 14 체크리스트 ===== */
 form.check fieldset { margin: 6mm 0 0 0; padding: 2mm 6mm 5mm 6mm; border: 1.6px solid #151413; background-color: #FFFFFF; }
-form.check legend { padding: 0 3mm; font-family: 'Noto Serif CJK KR', serif; font-size: 16px; font-weight: 900; }
+form.check legend { padding: 0 3mm; font-family: 'Noto Serif CJK KR', serif; font-size: 16px; font-weight: 900; line-height: 28px; }
 .item { overflow: hidden; padding: 2.6mm 0; border-bottom: 1px solid #CFC6BA; }
 .item:last-child { border-bottom: none; }
 .item input { float: left; width: 4mm; height: 4mm; margin: 0.8mm 0 0 0; }
-.item label { display: block; margin: 0 0 0 7mm; font-size: 11.2px; line-height: 1.6; }
+.item label { display: block; margin: 0 0 0 7mm; font-size: 11.2px; line-height: 17.92px; }
 .item label b { font-family: 'Noto Serif CJK KR', serif; font-weight: 900; }
 .care { overflow: hidden; margin: 6mm 0 0 0; }
 .carebox { float: left; width: 77mm; padding: 5mm; background-color: #E8D6CC; }
 .carebox + .carebox { margin: 0 0 0 5mm; background-color: #FFFFFF; border: 1px solid #A8231C; }
-.carebox h4 { margin: 0 0 2mm 0; font-size: 14.5px; }
-.carebox ul { padding: 0 0 0 4mm; font-size: 10.5px; line-height: 1.7; }
+.carebox h4 { margin: 0 0 2mm 0; font-size: 14.5px; line-height: 16.68px; }
+.carebox ul { padding: 0 0 0 4mm; font-size: 10.5px; line-height: 17.85px; }
 
 /* ===== 15 판권 · 16 뒤표지 ===== */
-.cbig { margin: 14mm 0 0 0; font-family: 'Noto Serif CJK KR', serif; font-size: 40px; font-weight: 900; line-height: 1.25; }
+.cbig { margin: 14mm 0 0 0; font-family: 'Noto Serif CJK KR', serif; font-size: 40px; font-weight: 900; line-height: 50px; }
 .cbig span { color: #A8231C; }
 .credits { overflow: hidden; margin: 10mm 0 0 0; }
 .cr { float: left; width: 86mm; }
 .cr + .cr { margin: 0 0 0 8mm; }
-.dt { margin: 4mm 0 0 0; font-family: Inter, sans-serif; font-size: 8.4px; color: #6E675F; }
-.dd { font-family: 'Noto Serif CJK KR', serif; font-size: 12.5px; font-weight: bold; line-height: 1.7; }
-.cnote { margin: 4mm 0 0 0; font-size: 9.6px; line-height: 1.7; color: #6E675F; }
+.dt { margin: 4mm 0 0 0; font-family: Inter, sans-serif; font-size: 8.4px; color: #6E675F; line-height: 14.7px; }
+.dd { font-family: 'Noto Serif CJK KR', serif; font-size: 12.5px; font-weight: bold; line-height: 21.25px; }
+.cnote { margin: 4mm 0 0 0; font-size: 9.6px; line-height: 16.32px; color: #6E675F; }
 .backc { position: absolute; left: 0; top: 80mm; width: 210mm; text-align: center; }
-.backc h2 { font-size: 80px; }
+.backc h2 { font-size: 80px; line-height: 92px; }
 .backc h2 span { color: #A8231C; }
-.backc p { margin: 6mm 0 0 0; font-family: 'Noto Serif CJK KR', serif; font-size: 16px; color: #D8D0C4; }
+.backc p { margin: 6mm 0 0 0; font-family: 'Noto Serif CJK KR', serif; font-size: 16px; color: #D8D0C4; line-height: 28px; }
 .dots { margin: 14mm 0 0 0; }
 .dots span { display: inline-block; width: 8mm; height: 8mm; margin: 0 1.5mm; border-radius: 50%; }
-.backfoot { position: absolute; left: 15mm; top: 252mm; width: 180mm; font-family: Inter, sans-serif; font-size: 8.6px; color: #8C857C; }
+.backfoot { position: absolute; left: 15mm; top: 252mm; width: 180mm; font-family: Inter, sans-serif; font-size: 8.6px; color: #8C857C; line-height: 15.05px; }
 .backfoot span { float: right; }
 </style>
 </head>
@@ -540,7 +544,7 @@ form.check legend { padding: 0 3mm; font-family: 'Noto Serif CJK KR', serif; fon
         <p class="cap">광고 차단의 원리 — 숨기기</p>
         <p class="code"><span class="c">/* 속성 선택자로 광고 영역을 골라 */</span><br>
 <span class="k">div[class="ad-banner"]</span>,<br>
-<span class="k">iframe[src="ads.html"]</span> {<br>
+<span class="k">img[src="ads.png"]</span> {<br>
 &nbsp;&nbsp;display: <span class="s">none</span>;&nbsp;&nbsp;<span class="c">/* 가시 속성 */</span><br>
 }</p>
       </div>
@@ -900,7 +904,7 @@ form.check legend { padding: 0 3mm; font-family: 'Noto Serif CJK KR', serif; fon
         <p class="dt">EDITOR</p><p class="dd">조서형 (학번 2601981)</p>
         <p class="dt">ISSUE</p><p class="dd">Vol.01 · 2026 F/W · 중간고사 대체 과제</p>
         <p class="dt">MADE WITH</p><p class="dd">수업에서 배운 HTML5 태그와 CSS3로만 조판 —<br>표지의 일러스트까지 모두 코드로 그렸습니다.</p>
-        <p class="dt">TYPEFACE</p><p class="dd">Noto Serif KR · Noto Sans KR · Inter</p>
+        <p class="dt">TYPEFACE</p><p class="dd">Noto Serif CJK KR · Noto Sans CJK KR · Inter · DejaVu Sans Mono</p>
       </div>
     </div>
     <p class="cnote">이 책에 소개한 확장 프로그램 정보는 2026년 10월 기준이며, 각 확장 프로그램의 기능·지원 브라우저·가격은 바뀔 수 있습니다. 설치 전에는 반드시 공식 스토어의 최신 정보를 확인하세요. 13쪽의 BEST/WORST 상품은 설명을 위한 가상의 예시입니다.</p>
