@@ -13,7 +13,7 @@
 ## 파일
 | 파일 | 설명 |
 |---|---|
-| `index.html` | 브로슈어 전체 소스. 한 쪽 = `<section class="page">` 하나 (210×270mm) |
+| `index.html` | 브로슈어 전체 소스. 한 쪽 = `<section class="page">` 하나 (210×271mm) |
 
 ## 실행 방법
 브라우저에서 `index.html`을 열면 16쪽이 세로로 이어져 보입니다.
@@ -21,7 +21,7 @@
 ## 사용한 수업 내용
 - **HTML**: `h1`~`h5`, `p`, `br`, `hr`, `a`(href·id 링크), `b`, `ul`/`ol`/`li`, `table`/`thead`/`tbody`/`tr`/`th`/`td`(rowspan),
   `form`/`fieldset`/`legend`/`input type="checkbox"`/`label for`, `div`/`span`, `header`/`nav`/`section`/`article`/`aside`/`footer`
-- **선택자**: 전체·태그·아이디·클래스(여러 개)·태그+클래스, 후손·자손, 동위(`+`), 구조(`:first-child`, `:last-child`, `:nth-child(2n)`)
+- **선택자**: 전체·태그·아이디·클래스(여러 개)·태그+클래스, 후손, 동위(`+`), 구조(`:last-child`, `:nth-child(2n)`)
 - **속성**: 박스(width·height·margin·padding·border·border-radius), 가시(display), 배경(background-color·background-image·background-size),
   글자(font-*·text-align·line-height·text-decoration), 위치(position relative/absolute·left·top·z-index·overflow), 유동(float),
   목록(list-style), 그림자(box-shadow), 그레이디언트(linear-gradient)
